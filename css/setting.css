@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+/* font */
+/* gowun batang */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap");
+/* pretendard */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+/* variable */
+:root {
+  /* color */
+  --pri-col: #513d2a;
+  --sec-col: #000;
+  --bd-col: #cdd1d5;
+  --bd-sub-col: #f4f5f6;
+  --whi-col: #fff;
+  --tit-col: #eee;
+  --txt-col: #332e28;
+  --inp-col: #eee;
+  --btn-col: #eee;
+  --btn-hov-col: #eee;
+
+  /* font */
+  --txt-bold: 700;
+  --txt-reg: 400;
+  --txt-size: 15px;
+  --txt-sub-size: 15px;
+  --tit-size: 15px;
+  --tit-sub-size: 15px;
+  --gowun: "Gowun Batang", serif;
+}
+/* setting */
+* {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: var(--txt-col);
+  font-weight: var(--txt-reg);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button,
+input,
+select {
+  border: none;
+  background-color: transparent;
+}
