@@ -12,9 +12,9 @@
 :root {
   /* color */
   --pri-col: #513d2a;
-  --sec-col: #49433e;
+  --sec-col: #997c61;
   --bd-col: #cdd1d5;
-  --bg-col: #fffdfa;
+  --bg-col: #fffbf5;
   --bd-sub-col: #f4f5f6;
   --whi-col: #fff;
   --tit-col: #eee;
@@ -36,7 +36,7 @@
   --paperlogy: "Paperlogy";
 
   /* effect */
-  --shadow: 0 0 8px rgba(223,223,223,0.25)
+  --shadow: 0 0 8px rgba(223, 223, 223, 0.25);
 }
 /* setting */
 * {

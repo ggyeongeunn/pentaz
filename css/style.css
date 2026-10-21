@@ -27,6 +27,7 @@
   text-align: center;
   font-family: var(--paperlogy);
   font-size: var(--bg-txt-size);
+  line-height: 1.25;
   font-weight: 800;
   color: #ffffff60;
   z-index: 9;

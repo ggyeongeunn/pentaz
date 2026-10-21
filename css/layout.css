@@ -12,6 +12,11 @@ body {
   margin: 0 auto;
   position: relative;
 }
+button {
+  background-color: #fff;
+  font-size: var(--txt-size);
+  font-weight: 500;
+}
 
 /* header */
 header {
@@ -40,46 +45,76 @@ header .upper .inner {
   gap: 10px;
 }
 .lower {
-  position: relative;
+  /* position: relative; */
 }
 .lower nav {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 .lower nav a {
-  padding: 5px 12px;
-  font-size: 15px;
+  min-width: 180px;
+  padding: 5px 10px;
+  font-size: var(--txt-size);
+  text-align: center;
+  letter-spacing: -0.02em;
   transition: 0.3s;
 }
-.lower nav a:hover {
-  background-color: var(--bd-sub-col);
+.lower nav a:hover,
+.lower nav a.on {
+  color: var(--sec-col);
 }
 .submenu {
-  background-color: #ddd;
-  display: none;
+  background-color: #fffffff2;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
 }
 .submenu .inner {
   display: flex;
   align-items: start;
   justify-content: center;
-  gap: 20px;
-  background-color: #fff;
 }
-.submenu .inner > ul {
-  border: 1px solid #000;
+.depth2 {
+  padding: 15px 10px;
+  height: stretch;
+  border-left: 1px solid var(--bd-sub-col);
+}
+.depth2:last-child {
+  border-right: 1px solid var(--bd-sub-col);
+}
+.depth2 > li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.depth2 a {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  display: block;
+  font-size: var(--txt-size);
+  color: var(--pri-col);
+  transition: 0.3s;
+}
+.depth2 a:hover {
+  color: var(--sec-col);
+}
+.depth3 {
+  padding: 5px;
+}
+.depth3 a {
+  font-size: 14px;
+  color: var(--txt-sub-col);
 }
 /* footer */
 footer {
   padding: 100px;
-  background-color: var(--sec-col);
+  background-color: #49433e;
 }
 footer .inner {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 footer .link {
   display: flex;
@@ -97,14 +132,27 @@ footer .logo {
 footer nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
+}
+footer nav a {
+  position: relative;
+}
+footer nav a:not(:first-of-type)::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: var(--txt-sub-col);
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 address {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 5px 20px;
+  gap: 4px 20px;
 }
 footer nav a,
 address p,
