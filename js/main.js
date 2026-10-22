@@ -15,10 +15,10 @@ let bnSwiper = new Swiper(".bnSwiper", {
 // room swiper
 let roomSwiper = new Swiper(".roomSwiper", {
   loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     type: "progressbar",
@@ -46,6 +46,23 @@ navList.forEach((item, index) => {
     });
     item.classList.add("on");
   });
+});
+
+// header animation
+const header = document.querySelector("header");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY <= 0) {
+    header.classList.remove("hide");
+  } else if (currentScrollY > lastScrollY) {
+    header.classList.add("hide");
+  } else {
+    header.classList.remove("hide");
+  }
+  lastScrollY = currentScrollY;
 });
 
 // nav mouseover function
@@ -77,8 +94,14 @@ subNav.forEach((item, index) => {
 });
 
 // address clipboard
-function clipBoard() {
-  const copyBtn = document.querySelector(".copy");
-  copyBtn.select();
-  document.execCommand("copy");
-}
+const copy = document.querySelector(".copy");
+const address = document.querySelector(".address").textContent;
+const toast = document.querySelector(".toast");
+
+copy.addEventListener("click", () => {
+  navigator.clipboard.writeText(address);
+  toast.classList.add("on");
+  setTimeout(() => {
+    toast.classList.remove("on");
+  }, 1000);
+});

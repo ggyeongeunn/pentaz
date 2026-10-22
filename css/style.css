@@ -78,6 +78,16 @@
   top: 50%;
   transform: translate(50%, -50%);
 }
+.reserv-list input[type="date"] {
+  width: 120px;
+}
+.reserv-list .sel-room form,
+.reserv-list .sel-date form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
 .reserv-list input[type="number"] {
   width: 40px;
   text-align: center;
@@ -124,6 +134,7 @@ section h3 {
 .roomSwiper .img {
   width: 50%;
   aspect-ratio: 1 / 0.75;
+  overflow: hidden;
   object-fit: cover;
 }
 .roomSwiper .img img {
@@ -133,21 +144,23 @@ section h3 {
 }
 .roomSwiper .room-desc {
   width: 50%;
-  padding-left: 60px;
 }
 .roomSwiper .room-desc h2 {
   font-size: 64px;
-  margin-bottom: 40px;
-  color: #8c786640;
+  color: #8c786620;
   font-family: "Paperlogy";
   font-weight: 900;
   letter-spacing: -0.015em;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .roomSwiper .room-desc p {
   font-size: 15px;
   line-height: 1.75;
   color: var(--pri-col);
   font-weight: 500;
+  padding-left: 60px;
 }
 /* room */
 
@@ -165,9 +178,6 @@ section h3 {
   box-shadow: var(--shadow);
   cursor: pointer;
   transition: 0.3s ease-in-out;
-}
-.offers .card:hover {
-  transform: translateY(-5px);
 }
 .offers .card:hover img {
   transform: scale(1.02);
@@ -195,6 +205,7 @@ section h3 {
   font-weight: 600;
 }
 .offers .card-desc span {
+  display: block;
   font-size: 13px;
   color: var(--bd-col);
 }
@@ -217,35 +228,22 @@ section h3 {
 }
 .location .loc-info {
   width: 40%;
-  padding: 0 50px;
+  padding: 0 50px 50px;
 }
 .location .loc-info h3 {
-  font-size: 36px;
+  font-size: 32px;
   text-align: left;
-  margin-bottom: 200px;
+  margin-bottom: 10px;
 }
 .location .loc-desc {
-  margin-bottom: 50px;
   padding: 30px 10px;
   display: flex;
   flex-direction: column;
   gap: 6px;
   border-top: 1px solid var(--bd-col);
   border-bottom: 1px solid var(--bd-col);
-  position: relative;
 }
-.location .loc-desc::before {
-  content: "";
-  background: url("../images/logo.svg") no-repeat;
-  background-size: 100%;
-  width: 65px;
-  height: 18px;
-  position: absolute;
-  right: 0;
-  top: -5px;
-  transform: translateY(-100%);
-  opacity: 0.8;
-}
+
 .location .loc-desc li {
   display: flex;
   align-items: center;
@@ -308,8 +306,27 @@ section h3 {
 .location .map span::after {
   animation: pulse2 1.2s ease-in-out 0s infinite;
 }
-
 /* location */
+
+/* aside */
+
+/* toast */
+.toast {
+  position: fixed;
+  left: 50%;
+  top: 30px;
+  transform: translate(-50%, 0);
+  z-index: 999;
+  background-color: #513d2ae0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: var(--bd-sub-col);
+  font-size: 15px;
+  opacity: 0;
+}
+.toast.on {
+  animation: toast 0.5s linear;
+}
 
 @keyframes pulse {
   0% {
@@ -335,5 +352,17 @@ section h3 {
   100% {
     opacity: 0;
     transform: scale(6.6);
+  }
+}
+@keyframes toast {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 50px;
   }
 }

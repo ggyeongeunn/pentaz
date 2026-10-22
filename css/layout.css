@@ -46,6 +46,10 @@ header {
   transform: translateX(-50%);
   background-color: var(--whi-col);
   z-index: 999;
+  transition: 0.4s;
+}
+header.hide {
+  transform: translate(-50%, -100%);
 }
 header .upper {
   height: 75px;
@@ -144,12 +148,17 @@ footer .sns {
   align-items: center;
   gap: 10px;
 }
+footer .sns img {
+  width: 36px;
+  height: 36px;
+}
 footer .logo {
   filter: brightness(100) opacity(0.75);
 }
 footer nav {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 footer nav a {
