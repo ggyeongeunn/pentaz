@@ -102,7 +102,7 @@
 
 .room,
 .offers {
-  padding: 80px 120px;
+  padding: 80px 0 120px;
 }
 
 section h3 {
@@ -187,6 +187,10 @@ section h3 {
   padding: 25px 20px;
 }
 .offers .card-desc h4 {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 20px;
   font-weight: 600;
 }
@@ -195,6 +199,12 @@ section h3 {
   color: var(--bd-col);
 }
 .offers .card-desc p {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 15px;
   font-size: var(--txt-size);
 }
@@ -265,7 +275,7 @@ section h3 {
 }
 .location .map {
   width: 60%;
-  height: 600px;
+  aspect-ratio: 1 / 0.75;
   overflow: hidden;
   position: relative;
 }
