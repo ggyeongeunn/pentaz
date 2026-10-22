@@ -79,7 +79,7 @@
   transform: translate(50%, -50%);
 }
 .reserv-list input[type="date"] {
-  width: 120px;
+  padding: 6px 12px;
 }
 .reserv-list .sel-room form,
 .reserv-list .sel-date form {
@@ -312,6 +312,7 @@ section h3 {
 
 /* toast */
 .toast {
+  width: fit-content;
   position: fixed;
   left: 50%;
   top: 30px;

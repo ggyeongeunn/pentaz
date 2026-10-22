@@ -36,6 +36,25 @@
     gap: 15px;
   }
 }
+/* 1200px */
+@media (orientation: portrait) {
+  header {
+    height: 75px;
+  }
+  header .lower {
+    display: none;
+  }
+  .banner {
+    margin-top: 75px;
+    height: calc(100vh - 75px);
+  }
+  .util > button {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
 
 /* 1024px */
 @media (max-width: 1024px) {

@@ -15,10 +15,10 @@ let bnSwiper = new Swiper(".bnSwiper", {
 // room swiper
 let roomSwiper = new Swiper(".roomSwiper", {
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     type: "progressbar",
@@ -99,9 +99,31 @@ const address = document.querySelector(".address").textContent;
 const toast = document.querySelector(".toast");
 
 copy.addEventListener("click", () => {
+  console.log(address);
   navigator.clipboard.writeText(address);
   toast.classList.add("on");
   setTimeout(() => {
     toast.classList.remove("on");
   }, 1000);
+});
+
+// aside
+const scrollTop = document.querySelector("aside");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTop.style.opacity = 1;
+    scrollTop.style.visibility = "visible";
+  } else {
+    scrollTop.style.opacity = 0;
+    scrollTop.style.visibility = "hidden";
+  }
+});
+
+// 버튼 클릭하면 최상단으로 이동
+scrollTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
