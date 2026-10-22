@@ -17,20 +17,17 @@
   --bg-col: #fffbf5;
   --bd-sub-col: #f4f5f6;
   --whi-col: #fff;
-  --tit-col: #eee;
   --txt-col: #332e28;
   --txt-sub-col: #a0a0a0;
-  --inp-col: #eee;
-  --btn-col: #eee;
-  --btn-hov-col: #eee;
+  --inp-col: #564e44;
+  --btn-col: #8c7866;
+  --btn-hov-col: #79695a;
 
   /* font */
   --txt-bold: 700;
   --txt-reg: 400;
   --txt-size: 15px;
-  --txt-sub-size: 15px;
   --tit-size: 24px;
-  --tit-sub-size: 15px;
   --bg-txt-size: 80px;
   --gowun: "Gowun Batang", serif;
   --paperlogy: "Paperlogy";
@@ -72,7 +69,14 @@ input,
 select {
   border: none;
   background-color: transparent;
+  outline: none;
+  appearance: none;
 }
 img {
   display: block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

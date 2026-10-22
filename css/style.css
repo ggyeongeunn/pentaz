@@ -1,5 +1,4 @@
 @charset 'utf-8';
-@import url("setting.css");
 
 /* style */
 /* banner */
@@ -31,6 +30,7 @@
   font-weight: 800;
   color: #ffffff60;
   z-index: 9;
+  user-select: none;
 }
 .reservation {
   width: 100%;
@@ -49,6 +49,55 @@
   font-size: var(--tit-size);
   font-weight: bold;
 }
+.reserv-wrap,
+.reserv-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reserv-wrap {
+  margin-top: 30px;
+  gap: 20px;
+}
+.reserv-list {
+  display: grid;
+  width: calc(100% - 120px);
+  gap: 40px;
+  grid-template-columns: 3fr 4fr 1fr 1fr;
+}
+.reserv-list li {
+  position: relative;
+}
+.reserv-list li:not(:first-of-type)::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: var(--bd-col);
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+.reserv-list input[type="number"] {
+  width: 40px;
+  text-align: center;
+}
+.reserv-list li p,
+.reserv-list li input,
+.reserv-list li select {
+  font-size: 15px;
+}
+.reserv-list li input,
+.reserv-list li select {
+  color: var(--btn-col);
+  font-weight: 600;
+}
+.reserv-list li select {
+  min-width: 200px;
+  border: none;
+  background: none;
+  text-align: right;
+}
 /* banner */
 
 .room,
@@ -64,13 +113,217 @@ section h3 {
   margin-bottom: 120px;
 }
 /* room */
-.room {
+.room,
+.location {
   background-color: var(--bg-col);
+}
+.roomSwiper .swiper-slide {
+  display: flex;
+  align-items: flex-end;
+}
+.roomSwiper .img {
+  width: 50%;
+  aspect-ratio: 1 / 0.75;
+  object-fit: cover;
+}
+.roomSwiper .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.roomSwiper .room-desc {
+  width: 50%;
+  padding-left: 60px;
+}
+.roomSwiper .room-desc h2 {
+  font-size: 64px;
+  margin-bottom: 40px;
+  color: #8c786640;
+  font-family: "Paperlogy";
+  font-weight: 900;
+  letter-spacing: -0.015em;
+}
+.roomSwiper .room-desc p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--pri-col);
+  font-weight: 500;
 }
 /* room */
 
 /* offers */
+.offers .offers-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.offers .card {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.offers .card:hover {
+  transform: translateY(-5px);
+}
+.offers .card:hover img {
+  transform: scale(1.02);
+}
+.offers .card .img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.offers .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+.offers .card-desc {
+  padding: 25px 20px;
+}
+.offers .card-desc h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.offers .card-desc span {
+  font-size: 13px;
+  color: var(--bd-col);
+}
+.offers .card-desc p {
+  margin-top: 15px;
+  font-size: var(--txt-size);
+}
 /* offers */
 
 /* location */
+.location .inner {
+  display: flex;
+  align-items: flex-end;
+}
+.location .loc-info {
+  width: 40%;
+  padding: 0 50px;
+}
+.location .loc-info h3 {
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: 200px;
+}
+.location .loc-desc {
+  margin-bottom: 50px;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--bd-col);
+  border-bottom: 1px solid var(--bd-col);
+  position: relative;
+}
+.location .loc-desc::before {
+  content: "";
+  background: url("../images/logo.svg") no-repeat;
+  background-size: 100%;
+  width: 65px;
+  height: 18px;
+  position: absolute;
+  right: 0;
+  top: -5px;
+  transform: translateY(-100%);
+  opacity: 0.8;
+}
+.location .loc-desc li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.location .loc-desc span {
+  font-weight: 700;
+  color: var(--sec-col);
+}
+.location .loc-desc p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.location .copy {
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.location .copy:hover {
+  background-color: var(--bd-sub-col);
+}
+.location .loc-desc p,
+.location .loc-desc span {
+  font-size: 15px;
+}
+.location .map {
+  width: 60%;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.location .map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.location .map span {
+  width: 15px;
+  height: 15px;
+  background-color: var(--pri-col);
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - 18px), calc(-50% - 8px));
+  z-index: 9;
+}
+.location .map span::before,
+.location .map span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--pri-col);
+  animation: pulse 1.2s ease-in-out 0s infinite;
+}
+.location .map span::after {
+  animation: pulse2 1.2s ease-in-out 0s infinite;
+}
+
 /* location */
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.3);
+  }
+}
+@keyframes pulse2 {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(6.6);
+  }
+}

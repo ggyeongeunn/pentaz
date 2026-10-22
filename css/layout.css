@@ -1,5 +1,4 @@
 @charset 'utf-8';
-@import url("setting.css");
 
 /* layout */
 body {
@@ -13,11 +12,30 @@ body {
   position: relative;
 }
 button {
-  background-color: #fff;
+  min-width: 80px;
+  padding: 6px 16px;
+  background-color: var(--btn-col);
+  color: var(--bd-sub-col);
   font-size: var(--txt-size);
-  font-weight: 500;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
+button:hover {
+  background-color: var(--btn-hov-col);
+}
+select {
+  min-width: 100px;
+  border: 1px solid var(--bd-col);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--inp-col);
+  background: url("../images/down-arrow.svg") no-repeat right 10px center;
+  appearance: none;
+}
 /* header */
 header {
   width: 100%;
@@ -108,7 +126,7 @@ header .upper .inner {
 }
 /* footer */
 footer {
-  padding: 100px;
+  padding: 80px 0;
   background-color: #49433e;
 }
 footer .inner {
@@ -157,11 +175,56 @@ address {
 footer nav a,
 address p,
 .copy {
-  font-size: var(--txt-sub-size);
+  font-size: var(--txt-size);
   color: var(--txt-sub-col);
   font-style: normal;
+  transition: 0.2s;
+}
+footer nav a:hover {
+  color: var(--bd-sub-col);
 }
 /* swiper */
 .swiper-pagination-bullet {
   background-color: var(--pri-col);
+}
+.swiper-control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-100%, -10px);
+  z-index: 9;
+}
+.roomSwiper .swiper-pagination-progressbar {
+  width: 120px;
+  position: relative;
+  background-color: #ffffff80;
+}
+.roomSwiper .swiper-pagination-progressbar-fill {
+  background: #fff;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  filter: brightness(100) opacity(0.95);
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  display: none;
+}
+.swiper-button-prev {
+  background: url("../images/left-arrow.svg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.swiper-button-next {
+  background: url("../images/right-arrow.svg") no-repeat;
+  background-size: cover;
+  background-position: center center;
 }

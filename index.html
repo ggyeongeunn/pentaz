@@ -145,17 +145,202 @@
         <div class="reservation inner">
           <h2>Quick Reservation</h2>
           <div class="reserv-wrap">
+            <ul class="reserv-list">
+              <li class="sel-room">
+                <p>객실 선택</p>
+                <form>
+                  <select name="room">
+                    <option value="familysuite" selected>패밀리 스위트</option>
+                    <option value="superiorsuite">슈페리어 스위트</option>
+                    <option value="suite">스위트</option>
+                    <option value="juniorsuite">주니어 스위트</option>
+                    <option value="deluxe">디럭스</option>
+                  </select>
+                </form>
+              </li>
+              <li class="sel-date">
+                <p>체크인 / 체크아웃</p>
+                <form>
+                  <input type="date" placeholder="체크인" value="2026-10-22" />
+                  <span>-</span>
+                  <input
+                    type="date"
+                    placeholder="체크아웃"
+                    value="2026-10-23"
+                  />
+                </form>
+              </li>
+              <li class="sel-per">
+                <p>성인</p>
+                <form><input type="number" value="0" /></form>
+              </li>
+              <li class="sel-per">
+                <p>아동</p>
+                <form><input type="number" value="0" /></form>
+              </li>
+            </ul>
             <button>예약하기</button>
           </div>
         </div>
       </section>
+      <!-- room -->
       <section class="room">
         <h3 class="tit">Room Type</h3>
+        <div class="swiper roomSwiper inner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img">
+                <img src="images/room1.png" alt="room" />
+              </div>
+              <div class="room-desc">
+                <h2>FAMILY SUITE</h2>
+                <p>
+                  패밀리 스위트 룸은 넓고 쾌적한 객실과 <br />다양한 스타일의
+                  베드가 구성되어 있어,<br />
+                  가족 고객들의 ‘Stay – Vacation’ 으로 각광받고 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img">
+                <img src="images/room2.png" alt="room" />
+              </div>
+              <div class="room-desc">
+                <h2>SUPERIOR SUITE</h2>
+                <p>
+                  중후함과 실용성을 고루 갖춘 <br />특별한 레지덴셜
+                  스위트룸으로써<br />
+                  럭셔리한 실내 디자인과 <br />홈 네트워크 시스템으로 쾌적함을
+                  더합니다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img">
+                <img src="images/room3.png" alt="room" />
+              </div>
+              <div class="room-desc">
+                <h2>SUITE</h2>
+                <p>
+                  넓은 실내 공간은 일반 호텔 객실과는 다른 <br />여유와 품격을
+                  느끼실 수 있으며, <br />충분한 공간의 드레스 룸, 격조 있는
+                  서재, 아일랜드 스타일의 <br />최고급 다이닝 공간은 오래
+                  머물수록 감동을 더해갑니다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img">
+                <img src="images/room4.png" alt="room" />
+              </div>
+              <div class="room-desc">
+                <h2>JUNIOR SUITE</h2>
+                <p>
+                  모던 클래식의 세련되고 우아한 공간에서 <br />도심 속의 낭만과
+                  여유로움을 즐기실 수 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img">
+                <img src="images/room5.png" alt="room" />
+              </div>
+              <div class="room-desc">
+                <h2>DELUXE</h2>
+                <p>
+                  모던함과 심플함이 느껴지는 <br />밝고 화사한 실내 디자인과
+                  유비쿼터스 홈네트워크 등 <br />첨단 시스템을 갖춘 실용적인
+                  공간입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-control">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
       </section>
+      <!-- offers -->
       <section class="offers">
         <h3 class="tit">Special Offers</h3>
+        <div class="offers-wrap inner">
+          <div class="card">
+            <div class="img">
+              <img src="images/offer1.png" alt="offer" />
+            </div>
+            <div class="card-desc">
+              <h4>2026 라구뜨 홈파티 박스</h4>
+              <span>2026. 1. 1 ~ 2026. 12. 31</span>
+              <p>간편한 테이크 아웃으로 <br />라구뜨 인기메뉴를 즐겨보세요.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="images/offer2.png" alt="offer" />
+            </div>
+            <div class="card-desc">
+              <h4>SUPER WEEK : 1박 라운지</h4>
+              <span>2026. 10. 12 - 2027. 02. 28</span>
+              <p>오직 10일간 전해지는 반가운 소식, <br />2026 슈퍼위크!</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="images/offer3.png" alt="offer" />
+            </div>
+            <div class="card-desc">
+              <h4>SUPER WEEK : 1박 조식</h4>
+              <span>2026. 10. 12 - 2027. 02. 28</span>
+              <p>오직 10일간 전해지는 반가운 소식, <br />2026 슈퍼위크!</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+              <img src="images/offer4.png" alt="offer" />
+            </div>
+            <div class="card-desc">
+              <h4>2026 라구뜨 홈파티 박스</h4>
+              <span>2026. 10. 12 - 2027. 02. 28</span>
+              <p>오직 10일간 전해지는 반가운 소식, <br />2026 슈퍼위크!</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="location"></section>
+      <!-- location -->
+      <section class="location">
+        <div class="inner">
+          <div class="loc-info">
+            <h3>Location</h3>
+            <ul class="loc-desc">
+              <li>
+                <span>주소</span>
+                <p>
+                  서울특별시 광진구 능동로 90 더 클래식 500
+                  <img src="images/copy.svg" alt="copy" class="copy" />
+                </p>
+              </li>
+              <li>
+                <span>대표번호</span>
+                <p>02-2218-5000</p>
+              </li>
+              <li>
+                <span>객실예약</span>
+                <p>02-2218-5777</p>
+              </li>
+              <li>
+                <span>이메일</span>
+                <p>reservation@theclassic500.co.kr</p>
+              </li>
+            </ul>
+          </div>
+          <div class="map">
+            <img src="images/map.png" alt="map" />
+            <span></span>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer -->
     <footer>

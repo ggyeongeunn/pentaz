@@ -1,15 +1,31 @@
 // banner swiper
-const swiper = new Swiper(".bnSwiper", {
+let bnSwiper = new Swiper(".bnSwiper", {
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
-  spaceBetween: 0,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   effect: "fade",
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+// room swiper
+let roomSwiper = new Swiper(".roomSwiper", {
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 
@@ -59,3 +75,10 @@ subNav.forEach((item, index) => {
     navList[index].classList.add("on");
   });
 });
+
+// address clipboard
+function clipBoard() {
+  const copyBtn = document.querySelector(".copy");
+  copyBtn.select();
+  document.execCommand("copy");
+}
