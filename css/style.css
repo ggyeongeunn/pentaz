@@ -274,7 +274,7 @@ section h3 {
 }
 .location .map {
   width: 60%;
-  aspect-ratio: 1 / 0.75;
+  aspect-ratio: 1 / 0.65;
   overflow: hidden;
   position: relative;
 }
@@ -327,7 +327,7 @@ section h3 {
   opacity: 0;
 }
 .toast.on {
-  animation: toast 0.5s linear infinite;
+  animation: toast 0.5s linear 1;
 }
 
 @keyframes pulse {
