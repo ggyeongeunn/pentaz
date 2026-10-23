@@ -157,6 +157,13 @@
   .swiper-control {
     display: none;
   }
+  .offers .card-desc h4 {
+    font-size: 18px;
+  }
+  .offers .card-desc p,
+  .roomSwiper .room-desc p {
+    font-size: 14px;
+  }
   .room,
   .offers {
     padding: 50px 0;
@@ -183,7 +190,7 @@
     font-size: 14px;
   }
   .location .map {
-    aspect-ratio: 1 / 0.45;
+    aspect-ratio: 1 / 0.65;
   }
   footer .link {
     align-items: start;
@@ -196,7 +203,7 @@
   footer nav a,
   address p,
   .copy {
-    font-size: 14px;
+    font-size: 13px;
   }
   address {
     width: 100%;
