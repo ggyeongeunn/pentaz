@@ -36,6 +36,11 @@
   --shadow: 0 0 8px rgba(190, 190, 190, 0.25);
 }
 /* setting */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none; 
+  text-size-adjust: none;
+}
 * {
   font-family:
     "Pretendard Variable",
