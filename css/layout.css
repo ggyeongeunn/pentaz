@@ -261,7 +261,26 @@ aside img {
   border-bottom: 1px solid var(--bd-sub-col);
 }
 .mob-submenu .depth3 {
-  /* display: none; */
+  display: none;
+}
+.mob-submenu .depth2 a {
+  position: relative;
+}
+.mob-submenu .depth2 a.on::after {
+  content: url("../images/toggle-down.svg");
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.mob-submenu .depth2 a.rotate::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+.mob-submenu .depth3.on {
+  display: block;
 }
 /* swiper */
 .swiper-pagination-bullet {

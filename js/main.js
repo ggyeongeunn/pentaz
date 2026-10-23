@@ -144,3 +144,30 @@ mobBtn.addEventListener("click", () => {
     overlay.style.display = "none";
   }
 });
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    mobMenu.classList.remove("show");
+    document.body.style.overflow = "auto";
+    overlay.style.display = "none";
+  }
+});
+
+// toggle menu
+const hasDepth = document.querySelectorAll(".depth2 > li:has(.depth3)");
+
+hasDepth.forEach((item) => {
+  const link = item.querySelector(":scope > a");
+  const depth3 = item.querySelector(".depth3");
+
+  link.classList.add("on");
+
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    depth3.classList.toggle("on");
+    if (depth3.classList.contains("on")) {
+      link.classList.add("rotate");
+    } else {
+      link.classList.remove("rotate");
+    }
+  });
+});
