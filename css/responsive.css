@@ -204,6 +204,15 @@
     align-items: flex-start;
     gap: 0;
   }
+  aside {
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+  }
+  aside img {
+    padding: 5px;
+  }
 }
 /* 480px */
 @media (max-width: 480px) {
