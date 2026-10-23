@@ -78,7 +78,8 @@
   top: 50%;
   transform: translate(50%, -50%);
 }
-.reserv-list input[type="date"] {
+.reserv-list input {
+  max-width: 140px;
   padding: 6px 12px;
 }
 .reserv-list .sel-room form,
@@ -202,12 +203,12 @@ section h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .offers .card-desc span {
   display: block;
   font-size: 13px;
-  color: var(--bd-col);
+  color: var(--txt-sub-col);
 }
 .offers .card-desc p {
   width: 100%;
@@ -312,7 +313,7 @@ section h3 {
 
 /* toast */
 .toast {
-  width: fit-content;
+  width: max-content;
   position: fixed;
   left: 50%;
   top: 30px;

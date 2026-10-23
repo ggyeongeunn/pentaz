@@ -95,7 +95,7 @@ subNav.forEach((item, index) => {
 
 // address clipboard
 const copy = document.querySelector(".copy");
-const address = document.querySelector(".address").textContent;
+const address = document.querySelector(".address").textContent.trim();
 const toast = document.querySelector(".toast");
 
 copy.addEventListener("click", () => {
@@ -120,10 +120,27 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// 버튼 클릭하면 최상단으로 이동
+// top button
 scrollTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
+});
+
+// mobile navigaion
+const mobBtn = document.querySelector(".mobile");
+const overlay = document.querySelector(".overlay");
+const mobMenu = document.querySelector(".mob-submenu");
+
+mobBtn.addEventListener("click", () => {
+  mobMenu.classList.toggle("show");
+
+  if (mobMenu.classList.contains("show")) {
+    document.body.style.overflow = "hidden";
+    overlay.style.display = "block";
+  } else {
+    document.body.style.overflow = "auto";
+    overlay.style.display = "none";
+  }
 });
