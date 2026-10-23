@@ -277,7 +277,7 @@ aside img {
   transition: 0.3s;
 }
 .mob-submenu .depth2 a.rotate::after {
-  transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 .mob-submenu .depth3.on {
   display: block;

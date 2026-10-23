@@ -316,7 +316,7 @@ section h3 {
   width: max-content;
   position: fixed;
   left: 50%;
-  top: 30px;
+  top: 50px;
   transform: translate(-50%, 0);
   z-index: 999;
   background-color: #513d2ae0;
@@ -327,7 +327,7 @@ section h3 {
   opacity: 0;
 }
 .toast.on {
-  animation: toast 0.5s linear;
+  animation: toast 0.5s linear infinite;
 }
 
 @keyframes pulse {
@@ -365,6 +365,6 @@ section h3 {
   }
   100% {
     opacity: 0;
-    top: 50px;
+    top: 30px;
   }
 }
